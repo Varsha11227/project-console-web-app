@@ -4,25 +4,35 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project77</title>
+    <title>Project 78</title>
 </head>
 <body>
-    <h1>Project on Console</h1>
-    <p>Microsoft Visual Studio is an integrated development environment from Microsoft.</p>
-    <p>The console object gives you access to the browser's console. It lets you output strings, arrays, and objects that help debug your code. The console is part of the window object, and is supplied by the Browser Object Model (BOM).</p>
+    <center>
+        <h1>My Family Book</h1>
+        <img id="img1" width="500px" height="500px" src="https://languageduringmealtime.com/wp-content/uploads/2014/11/The-family-book-e1417314391978.jpg">
+        <h4 id="names"></h4>
+        <button  onclick="next_img()">Next</button>
+    </center>
+   
     <script>
-        console.log("My first console project");
+        var images=["https://st.depositphotos.com/1724125/2693/v/950/depositphotos_26930203-stock-illustration-cartoon-dad.jpg",
+                    "https://comicvine1.cbsistatic.com/uploads/scale_small/11/111746/4310791-latest.jpg",
+                    "https://thumbs.dreamstime.com/z/big-brother-giving-his-little-brother-piggyback-ride-illustration-89952242.jpg",
+                    "https://i.pinimg.com/originals/81/64/9e/81649e253f65e1a5b1513584479bd4d3.jpg"];
 
-        var first_name="Sri ";
-        var last_name="Varsha";
-        console.log(first_name.concat(last_name));
+        var names=["Muraleedhara Rao", "Prameela", "Bhaskar", "Varsha"];
+        var i=0;
+        function next_img(){
 
-        var a=7;
-        var b=11;
-        console.log(a+b);
-        console.log(a-b);
-        console.log(a*b);
-        console.log(a/b);
+            document.getElementById("img1").src=images[i];
+            document.getElementById("names").innerHTML=names[i];
+            i++;
+            if(i==4){
+                i=0;
+            }
+        }
+
+
     </script>
 </body>
 </html>
